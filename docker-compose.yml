@@ -1,0 +1,23 @@
+services:
+  hri:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: candidates-hri:jazzy-cuda
+    container_name: hri_dev
+    stdin_open: true
+    tty: true
+    network_mode: host
+    volumes:
+      - ./ros2_ws:/ros2_ws
+    devices:
+      - /dev/video0:/dev/video0
+    security_opt:
+      - label=disable
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [ gpu ]
