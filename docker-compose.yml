@@ -10,6 +10,7 @@ services:
     network_mode: host
     volumes:
       - ./ros2_ws:/ros2_ws
+      - ./data:/data
     devices:
       - /dev/video0:/dev/video0
     security_opt:
