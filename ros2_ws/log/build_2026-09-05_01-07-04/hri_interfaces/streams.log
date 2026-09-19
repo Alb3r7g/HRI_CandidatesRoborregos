@@ -1,0 +1,342 @@
+[0.008s] Invoking command in '/ros2_ws/build/hri_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /ros2_ws/src/hri_interfaces -DCMAKE_INSTALL_PREFIX=/ros2_ws/install/hri_interfaces
+[0.082s] -- The C compiler identification is GNU 13.3.0
+[0.146s] -- The CXX compiler identification is GNU 13.3.0
+[0.158s] -- Detecting C compiler ABI info
+[0.225s] -- Detecting C compiler ABI info - done
+[0.231s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.231s] -- Detecting C compile features
+[0.231s] -- Detecting C compile features - done
+[0.239s] -- Detecting CXX compiler ABI info
+[0.307s] -- Detecting CXX compiler ABI info - done
+[0.314s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.314s] -- Detecting CXX compile features
+[0.314s] -- Detecting CXX compile features - done
+[0.317s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.405s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.473s] -- Found rosidl_default_generators: 1.6.1 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)
+[0.478s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.512s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.544s] -- Found rosidl_adapter: 4.6.9 (/opt/ros/jazzy/share/rosidl_adapter/cmake)
+[0.547s] -- Found std_msgs: 5.3.8 (/opt/ros/jazzy/share/std_msgs/cmake)
+[0.970s] -- Found ament_cmake_ros: 0.12.1 (/opt/ros/jazzy/share/ament_cmake_ros/cmake)
+[1.273s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.672s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.674s] -- Found python_cmake_module: 0.11.1 (/opt/ros/jazzy/share/python_cmake_module/cmake)
+[1.764s] -- Found PythonExtra: /usr/bin/python3  
+[2.030s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter Development NumPy Development.Module Development.Embed 
+[2.085s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[2.092s] -- Configuring done (2.1s)
+[2.117s] -- Generating done (0.0s)
+[2.125s] -- Build files have been written to: /ros2_ws/build/hri_interfaces
+[2.132s] Invoked command in '/ros2_ws/build/hri_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /ros2_ws/src/hri_interfaces -DCMAKE_INSTALL_PREFIX=/ros2_ws/install/hri_interfaces
+[2.132s] Invoking command in '/ros2_ws/build/hri_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /ros2_ws/build/hri_interfaces -- -j20 -l20
+[2.170s] [  3%] [34m[1mGenerating Rust code for ROS interfaces[0m
+[2.170s] [  3%] [34m[1mGenerating type hashes for ROS interfaces[0m
+[2.175s] [  3%] Built target ament_cmake_python_copy_hri_interfaces
+[2.314s] running egg_info
+[2.315s] creating hri_interfaces.egg-info
+[2.326s] writing hri_interfaces.egg-info/PKG-INFO
+[2.326s] writing dependency_links to hri_interfaces.egg-info/dependency_links.txt
+[2.326s] writing top-level names to hri_interfaces.egg-info/top_level.txt
+[2.326s] writing manifest file 'hri_interfaces.egg-info/SOURCES.txt'
+[2.344s] [  3%] Built target hri_interfaces__rosidl_generator_type_description
+[2.353s] [  4%] [34m[1mGenerating C code for ROS interfaces[0m
+[2.356s] reading manifest file 'hri_interfaces.egg-info/SOURCES.txt'
+[2.356s] writing manifest file 'hri_interfaces.egg-info/SOURCES.txt'
+[2.360s] [  4%] Built target hri_interfaces__rs
+[2.361s] [  6%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[2.373s] [  6%] Built target ament_cmake_python_build_hri_interfaces_egg
+[2.576s] [  6%] Built target hri_interfaces__cpp
+[2.613s] [ 10%] [32mBuilding C object CMakeFiles/hri_interfaces__rosidl_generator_c.dir/rosidl_generator_c/hri_interfaces/msg/detail/tracked_face_array__type_support.c.o[0m
+[2.613s] [ 10%] [32mBuilding C object CMakeFiles/hri_interfaces__rosidl_generator_c.dir/rosidl_generator_c/hri_interfaces/msg/detail/tracked_face_array__functions.c.o[0m
+[2.613s] [ 10%] [32mBuilding C object CMakeFiles/hri_interfaces__rosidl_generator_c.dir/rosidl_generator_c/hri_interfaces/msg/detail/identified_face__description.c.o[0m
+[2.613s] [ 12%] [32mBuilding C object CMakeFiles/hri_interfaces__rosidl_generator_c.dir/rosidl_generator_c/hri_interfaces/msg/detail/identified_face__type_support.c.o[0m
+[2.613s] [ 13%] [32mBuilding C object CMakeFiles/hri_interfaces__rosidl_generator_c.dir/rosidl_generator_c/hri_interfaces/msg/detail/identified_face_array__functions.c.o[0m
+[2.614s] [ 15%] [32mBuilding C object CMakeFiles/hri_interfaces__rosidl_generator_c.dir/rosidl_generator_c/hri_interfaces/msg/detail/identified_face_array__type_support.c.o[0m
+[2.614s] [ 16%] [32mBuilding C object CMakeFiles/hri_interfaces__rosidl_generator_c.dir/rosidl_generator_c/hri_interfaces/msg/detail/tracked_face__description.c.o[0m
+[2.614s] [ 20%] [32mBuilding C object CMakeFiles/hri_interfaces__rosidl_generator_c.dir/rosidl_generator_c/hri_interfaces/msg/detail/tracked_face__functions.c.o[0m
+[2.614s] [ 20%] [32mBuilding C object CMakeFiles/hri_interfaces__rosidl_generator_c.dir/rosidl_generator_c/hri_interfaces/msg/detail/tracked_face__type_support.c.o[0m
+[2.614s] [ 21%] [32mBuilding C object CMakeFiles/hri_interfaces__rosidl_generator_c.dir/rosidl_generator_c/hri_interfaces/msg/detail/tracked_face_array__description.c.o[0m
+[2.615s] [ 23%] [32mBuilding C object CMakeFiles/hri_interfaces__rosidl_generator_c.dir/rosidl_generator_c/hri_interfaces/msg/detail/identified_face__functions.c.o[0m
+[2.615s] [ 24%] [32mBuilding C object CMakeFiles/hri_interfaces__rosidl_generator_c.dir/rosidl_generator_c/hri_interfaces/msg/detail/identified_face_array__description.c.o[0m
+[2.658s] [ 26%] [32m[1mLinking C shared library libhri_interfaces__rosidl_generator_c.so[0m
+[2.685s] [ 26%] Built target hri_interfaces__rosidl_generator_c
+[2.691s] [ 27%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[2.692s] [ 29%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[2.693s] [ 30%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[2.693s] [ 33%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[2.693s] [ 33%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[2.694s] [ 35%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[2.899s] [ 36%] [32mBuilding CXX object CMakeFiles/hri_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/hri_interfaces/msg/tracked_face__type_support.cpp.o[0m
+[2.899s] [ 38%] [32mBuilding CXX object CMakeFiles/hri_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/hri_interfaces/msg/identified_face__type_support.cpp.o[0m
+[2.900s] [ 40%] [32mBuilding CXX object CMakeFiles/hri_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/hri_interfaces/msg/identified_face_array__type_support.cpp.o[0m
+[2.900s] [ 41%] [32mBuilding CXX object CMakeFiles/hri_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/hri_interfaces/msg/tracked_face_array__type_support.cpp.o[0m
+[2.901s] [ 43%] [32mBuilding CXX object CMakeFiles/hri_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/hri_interfaces/msg/tracked_face__type_support.cpp.o[0m
+[2.901s] [ 44%] [32mBuilding CXX object CMakeFiles/hri_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/hri_interfaces/msg/tracked_face_array__type_support.cpp.o[0m
+[2.902s] [ 46%] [32mBuilding CXX object CMakeFiles/hri_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/hri_interfaces/msg/identified_face_array__type_support.cpp.o[0m
+[2.903s] [ 47%] [32mBuilding CXX object CMakeFiles/hri_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/hri_interfaces/msg/identified_face__type_support.cpp.o[0m
+[2.916s] [ 49%] [32mBuilding CXX object CMakeFiles/hri_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/hri_interfaces/msg/detail/tracked_face__type_support.cpp.o[0m
+[2.916s] [ 50%] [32mBuilding CXX object CMakeFiles/hri_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/hri_interfaces/msg/detail/identified_face__type_support.cpp.o[0m
+[2.916s] [ 53%] [32mBuilding CXX object CMakeFiles/hri_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/hri_interfaces/msg/detail/tracked_face_array__type_support.cpp.o[0m
+[2.916s] [ 53%] [32mBuilding CXX object CMakeFiles/hri_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/hri_interfaces/msg/detail/identified_face_array__type_support.cpp.o[0m
+[2.926s] [ 55%] [32mBuilding C object CMakeFiles/hri_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/hri_interfaces/msg/detail/identified_face_array__type_support.c.o[0m
+[2.927s] [ 58%] [32mBuilding C object CMakeFiles/hri_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/hri_interfaces/msg/detail/tracked_face__type_support.c.o[0m
+[2.927s] [ 58%] [32mBuilding C object CMakeFiles/hri_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/hri_interfaces/msg/detail/tracked_face_array__type_support.c.o[0m
+[2.927s] [ 60%] [32mBuilding C object CMakeFiles/hri_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/hri_interfaces/msg/detail/identified_face__type_support.c.o[0m
+[2.943s] [ 61%] [32m[1mLinking CXX shared library libhri_interfaces__rosidl_typesupport_c.so[0m
+[2.973s] [ 63%] [32m[1mLinking C shared library libhri_interfaces__rosidl_typesupport_introspection_c.so[0m
+[2.976s] [ 64%] [32mBuilding CXX object CMakeFiles/hri_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/hri_interfaces/msg/detail/dds_fastrtps/tracked_face_array__type_support.cpp.o[0m
+[2.979s] [ 69%] [32mBuilding CXX object CMakeFiles/hri_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/hri_interfaces/msg/detail/dds_fastrtps/identified_face_array__type_support.cpp.o[0m
+[2.979s] [ 69%] [32mBuilding CXX object CMakeFiles/hri_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/hri_interfaces/msg/detail/dds_fastrtps/identified_face__type_support.cpp.o[0m
+[2.979s] [ 69%] [32mBuilding CXX object CMakeFiles/hri_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/hri_interfaces/msg/detail/dds_fastrtps/tracked_face__type_support.cpp.o[0m
+[2.979s] [ 69%] Built target hri_interfaces__rosidl_typesupport_c
+[3.005s] [ 69%] Built target hri_interfaces__rosidl_typesupport_introspection_c
+[3.015s] [ 70%] [32mBuilding CXX object CMakeFiles/hri_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/hri_interfaces/msg/detail/identified_face_array__type_support_c.cpp.o[0m
+[3.016s] [ 73%] [32mBuilding CXX object CMakeFiles/hri_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/hri_interfaces/msg/detail/tracked_face__type_support_c.cpp.o[0m
+[3.016s] [ 73%] [32mBuilding CXX object CMakeFiles/hri_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/hri_interfaces/msg/detail/tracked_face_array__type_support_c.cpp.o[0m
+[3.017s] [ 75%] [32mBuilding CXX object CMakeFiles/hri_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/hri_interfaces/msg/detail/identified_face__type_support_c.cpp.o[0m
+[3.287s] [ 76%] [32m[1mLinking CXX shared library libhri_interfaces__rosidl_typesupport_cpp.so[0m
+[3.300s] [ 78%] [32m[1mLinking CXX shared library libhri_interfaces__rosidl_typesupport_introspection_cpp.so[0m
+[3.337s] [ 78%] Built target hri_interfaces__rosidl_typesupport_cpp
+[3.392s] [ 78%] Built target hri_interfaces__rosidl_typesupport_introspection_cpp
+[3.421s] [ 80%] [32m[1mLinking CXX shared library libhri_interfaces__rosidl_typesupport_fastrtps_c.so[0m
+[3.483s] [ 80%] Built target hri_interfaces__rosidl_typesupport_fastrtps_c
+[3.500s] [ 81%] [32m[1mLinking CXX shared library libhri_interfaces__rosidl_typesupport_fastrtps_cpp.so[0m
+[3.550s] [ 81%] Built target hri_interfaces__rosidl_typesupport_fastrtps_cpp
+[3.566s] [ 81%] Built target hri_interfaces
+[3.581s] [ 83%] [34m[1mGenerating Python code for ROS interfaces[0m
+[3.878s] [ 83%] Built target hri_interfaces__py
+[3.893s] [ 84%] [32mBuilding C object CMakeFiles/hri_interfaces__rosidl_generator_py.dir/rosidl_generator_py/hri_interfaces/msg/_tracked_face_s.c.o[0m
+[3.893s] [ 86%] [32mBuilding C object CMakeFiles/hri_interfaces__rosidl_generator_py.dir/rosidl_generator_py/hri_interfaces/msg/_tracked_face_array_s.c.o[0m
+[3.893s] [ 87%] [32mBuilding C object CMakeFiles/hri_interfaces__rosidl_generator_py.dir/rosidl_generator_py/hri_interfaces/msg/_identified_face_array_s.c.o[0m
+[3.893s] [ 89%] [32mBuilding C object CMakeFiles/hri_interfaces__rosidl_generator_py.dir/rosidl_generator_py/hri_interfaces/msg/_identified_face_s.c.o[0m
+[3.992s] [ 90%] [32m[1mLinking C shared library libhri_interfaces__rosidl_generator_py.so[0m
+[4.030s] [ 90%] Built target hri_interfaces__rosidl_generator_py
+[4.046s] [ 95%] [32mBuilding C object CMakeFiles/hri_interfaces_s__rosidl_typesupport_introspection_c.dir/rosidl_generator_py/hri_interfaces/_hri_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[4.046s] [ 95%] [32mBuilding C object CMakeFiles/hri_interfaces_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_py/hri_interfaces/_hri_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[4.046s] [ 95%] [32mBuilding C object CMakeFiles/hri_interfaces_s__rosidl_typesupport_c.dir/rosidl_generator_py/hri_interfaces/_hri_interfaces_s.ep.rosidl_typesupport_c.c.o[0m
+[4.116s] [ 96%] [32m[1mLinking C shared module rosidl_generator_py/hri_interfaces/hri_interfaces_s__rosidl_typesupport_c.so[0m
+[4.117s] [100%] [32m[1mLinking C shared module rosidl_generator_py/hri_interfaces/hri_interfaces_s__rosidl_typesupport_introspection_c.so[0m
+[4.117s] [100%] [32m[1mLinking C shared module rosidl_generator_py/hri_interfaces/hri_interfaces_s__rosidl_typesupport_fastrtps_c.so[0m
+[4.140s] [100%] Built target hri_interfaces_s__rosidl_typesupport_fastrtps_c
+[4.140s] [100%] Built target hri_interfaces_s__rosidl_typesupport_c
+[4.141s] [100%] Built target hri_interfaces_s__rosidl_typesupport_introspection_c
+[4.152s] Invoked command in '/ros2_ws/build/hri_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /ros2_ws/build/hri_interfaces -- -j20 -l20
+[4.159s] Invoking command in '/ros2_ws/build/hri_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /ros2_ws/build/hri_interfaces
+[4.165s] -- Install configuration: ""
+[4.165s] -- Installing: /ros2_ws/install/hri_interfaces/share/ament_index/resource_index/rosidl_interfaces/hri_interfaces
+[4.165s] -- Installing: /ros2_ws/install/hri_interfaces/share/hri_interfaces/msg/TrackedFace.json
+[4.165s] -- Installing: /ros2_ws/install/hri_interfaces/share/hri_interfaces/msg/TrackedFaceArray.json
+[4.165s] -- Installing: /ros2_ws/install/hri_interfaces/share/hri_interfaces/msg/IdentifiedFace.json
+[4.165s] -- Installing: /ros2_ws/install/hri_interfaces/share/hri_interfaces/msg/IdentifiedFaceArray.json
+[4.166s] -- Installing: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces
+[4.166s] -- Installing: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg
+[4.166s] -- Installing: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg/rosidl_generator_c__visibility_control.h
+[4.166s] -- Installing: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg/tracked_face.h
+[4.166s] -- Installing: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg/detail
+[4.166s] -- Installing: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg/detail/tracked_face__description.c
+[4.166s] -- Installing: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg/detail/tracked_face__functions.c
+[4.166s] -- Installing: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg/detail/tracked_face__functions.h
+[4.166s] -- Installing: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg/detail/tracked_face__struct.h
+[4.166s] -- Installing: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg/detail/tracked_face__type_support.c
+[4.167s] -- Installing: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg/detail/tracked_face__type_support.h
+[4.167s] -- Installing: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg/detail/tracked_face_array__description.c
+[4.167s] -- Installing: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg/detail/tracked_face_array__functions.c
+[4.167s] -- Installing: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg/detail/tracked_face_array__functions.h
+[4.167s] -- Installing: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg/detail/tracked_face_array__struct.h
+[4.167s] -- Installing: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg/detail/tracked_face_array__type_support.c
+[4.167s] -- Installing: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg/detail/tracked_face_array__type_support.h
+[4.167s] -- Installing: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg/detail/identified_face__description.c
+[4.167s] -- Installing: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg/detail/identified_face__functions.c
+[4.167s] -- Installing: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg/detail/identified_face__functions.h
+[4.167s] -- Installing: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg/detail/identified_face__struct.h
+[4.168s] -- Installing: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg/detail/identified_face__type_support.c
+[4.168s] -- Installing: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg/detail/identified_face__type_support.h
+[4.168s] -- Installing: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg/detail/identified_face_array__description.c
+[4.168s] -- Installing: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg/detail/identified_face_array__functions.c
+[4.168s] -- Installing: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg/detail/identified_face_array__functions.h
+[4.168s] -- Installing: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg/detail/identified_face_array__struct.h
+[4.168s] -- Installing: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg/detail/identified_face_array__type_support.c
+[4.168s] -- Installing: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg/detail/identified_face_array__type_support.h
+[4.168s] -- Installing: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg/tracked_face_array.h
+[4.168s] -- Installing: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg/identified_face.h
+[4.168s] -- Installing: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg/identified_face_array.h
+[4.169s] -- Installing: /ros2_ws/install/hri_interfaces/share/hri_interfaces/environment/library_path.sh
+[4.169s] -- Installing: /ros2_ws/install/hri_interfaces/share/hri_interfaces/environment/library_path.dsv
+[4.169s] -- Installing: /ros2_ws/install/hri_interfaces/lib/libhri_interfaces__rosidl_generator_c.so
+[4.170s] -- Set non-toolchain portion of runtime path of "/ros2_ws/install/hri_interfaces/lib/libhri_interfaces__rosidl_generator_c.so" to ""
+[4.170s] -- Up-to-date: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces
+[4.170s] -- Up-to-date: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg
+[4.170s] -- Installing: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[4.170s] -- Up-to-date: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg/detail
+[4.170s] -- Installing: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg/detail/tracked_face__rosidl_typesupport_fastrtps_c.h
+[4.170s] -- Installing: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg/detail/tracked_face_array__rosidl_typesupport_fastrtps_c.h
+[4.170s] -- Installing: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg/detail/identified_face__rosidl_typesupport_fastrtps_c.h
+[4.170s] -- Installing: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg/detail/identified_face_array__rosidl_typesupport_fastrtps_c.h
+[4.170s] -- Installing: /ros2_ws/install/hri_interfaces/lib/libhri_interfaces__rosidl_typesupport_fastrtps_c.so
+[4.171s] -- Set non-toolchain portion of runtime path of "/ros2_ws/install/hri_interfaces/lib/libhri_interfaces__rosidl_typesupport_fastrtps_c.so" to ""
+[4.171s] -- Up-to-date: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces
+[4.171s] -- Up-to-date: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg
+[4.171s] -- Installing: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[4.171s] -- Up-to-date: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg/detail
+[4.171s] -- Installing: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg/detail/tracked_face__rosidl_typesupport_introspection_c.h
+[4.171s] -- Installing: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg/detail/tracked_face__type_support.c
+[4.172s] -- Installing: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg/detail/tracked_face_array__rosidl_typesupport_introspection_c.h
+[4.172s] -- Installing: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg/detail/tracked_face_array__type_support.c
+[4.172s] -- Installing: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg/detail/identified_face__rosidl_typesupport_introspection_c.h
+[4.172s] -- Installing: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg/detail/identified_face__type_support.c
+[4.172s] -- Installing: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg/detail/identified_face_array__rosidl_typesupport_introspection_c.h
+[4.172s] -- Installing: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg/detail/identified_face_array__type_support.c
+[4.172s] -- Installing: /ros2_ws/install/hri_interfaces/lib/libhri_interfaces__rosidl_typesupport_introspection_c.so
+[4.173s] -- Set non-toolchain portion of runtime path of "/ros2_ws/install/hri_interfaces/lib/libhri_interfaces__rosidl_typesupport_introspection_c.so" to ""
+[4.173s] -- Installing: /ros2_ws/install/hri_interfaces/lib/libhri_interfaces__rosidl_typesupport_c.so
+[4.174s] -- Set non-toolchain portion of runtime path of "/ros2_ws/install/hri_interfaces/lib/libhri_interfaces__rosidl_typesupport_c.so" to ""
+[4.174s] -- Up-to-date: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces
+[4.174s] -- Up-to-date: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg
+[4.174s] -- Installing: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
+[4.174s] -- Installing: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg/tracked_face.hpp
+[4.174s] -- Up-to-date: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg/detail
+[4.174s] -- Installing: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg/detail/tracked_face__builder.hpp
+[4.174s] -- Installing: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg/detail/tracked_face__struct.hpp
+[4.174s] -- Installing: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg/detail/tracked_face__traits.hpp
+[4.174s] -- Installing: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg/detail/tracked_face__type_support.hpp
+[4.174s] -- Installing: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg/detail/tracked_face_array__builder.hpp
+[4.174s] -- Installing: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg/detail/tracked_face_array__struct.hpp
+[4.174s] -- Installing: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg/detail/tracked_face_array__traits.hpp
+[4.175s] -- Installing: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg/detail/tracked_face_array__type_support.hpp
+[4.175s] -- Installing: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg/detail/identified_face__builder.hpp
+[4.175s] -- Installing: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg/detail/identified_face__struct.hpp
+[4.175s] -- Installing: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg/detail/identified_face__traits.hpp
+[4.175s] -- Installing: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg/detail/identified_face__type_support.hpp
+[4.175s] -- Installing: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg/detail/identified_face_array__builder.hpp
+[4.175s] -- Installing: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg/detail/identified_face_array__struct.hpp
+[4.175s] -- Installing: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg/detail/identified_face_array__traits.hpp
+[4.175s] -- Installing: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg/detail/identified_face_array__type_support.hpp
+[4.175s] -- Installing: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg/tracked_face_array.hpp
+[4.175s] -- Installing: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg/identified_face.hpp
+[4.175s] -- Installing: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg/identified_face_array.hpp
+[4.175s] -- Up-to-date: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces
+[4.175s] -- Up-to-date: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg
+[4.175s] -- Installing: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[4.175s] -- Up-to-date: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg/detail
+[4.175s] -- Installing: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg/detail/tracked_face__rosidl_typesupport_fastrtps_cpp.hpp
+[4.175s] -- Installing: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg/detail/dds_fastrtps
+[4.176s] -- Installing: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg/detail/tracked_face_array__rosidl_typesupport_fastrtps_cpp.hpp
+[4.176s] -- Installing: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg/detail/identified_face__rosidl_typesupport_fastrtps_cpp.hpp
+[4.176s] -- Installing: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg/detail/identified_face_array__rosidl_typesupport_fastrtps_cpp.hpp
+[4.176s] -- Installing: /ros2_ws/install/hri_interfaces/lib/libhri_interfaces__rosidl_typesupport_fastrtps_cpp.so
+[4.177s] -- Set non-toolchain portion of runtime path of "/ros2_ws/install/hri_interfaces/lib/libhri_interfaces__rosidl_typesupport_fastrtps_cpp.so" to ""
+[4.177s] -- Up-to-date: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces
+[4.177s] -- Up-to-date: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg
+[4.177s] -- Up-to-date: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg/detail
+[4.177s] -- Installing: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg/detail/tracked_face__rosidl_typesupport_introspection_cpp.hpp
+[4.177s] -- Installing: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg/detail/tracked_face__type_support.cpp
+[4.177s] -- Installing: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg/detail/tracked_face_array__rosidl_typesupport_introspection_cpp.hpp
+[4.177s] -- Installing: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg/detail/tracked_face_array__type_support.cpp
+[4.177s] -- Installing: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg/detail/identified_face__rosidl_typesupport_introspection_cpp.hpp
+[4.177s] -- Installing: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg/detail/identified_face__type_support.cpp
+[4.177s] -- Installing: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg/detail/identified_face_array__rosidl_typesupport_introspection_cpp.hpp
+[4.177s] -- Installing: /ros2_ws/install/hri_interfaces/include/hri_interfaces/hri_interfaces/msg/detail/identified_face_array__type_support.cpp
+[4.177s] -- Installing: /ros2_ws/install/hri_interfaces/lib/libhri_interfaces__rosidl_typesupport_introspection_cpp.so
+[4.179s] -- Set non-toolchain portion of runtime path of "/ros2_ws/install/hri_interfaces/lib/libhri_interfaces__rosidl_typesupport_introspection_cpp.so" to ""
+[4.179s] -- Installing: /ros2_ws/install/hri_interfaces/lib/libhri_interfaces__rosidl_typesupport_cpp.so
+[4.179s] -- Set non-toolchain portion of runtime path of "/ros2_ws/install/hri_interfaces/lib/libhri_interfaces__rosidl_typesupport_cpp.so" to ""
+[4.179s] -- Installing: /ros2_ws/install/hri_interfaces/share/hri_interfaces/environment/pythonpath.sh
+[4.180s] -- Installing: /ros2_ws/install/hri_interfaces/share/hri_interfaces/environment/pythonpath.dsv
+[4.180s] -- Installing: /ros2_ws/install/hri_interfaces/lib/python3.12/site-packages/hri_interfaces-0.0.1-py3.12.egg-info
+[4.180s] -- Installing: /ros2_ws/install/hri_interfaces/lib/python3.12/site-packages/hri_interfaces-0.0.1-py3.12.egg-info/PKG-INFO
+[4.180s] -- Installing: /ros2_ws/install/hri_interfaces/lib/python3.12/site-packages/hri_interfaces-0.0.1-py3.12.egg-info/dependency_links.txt
+[4.180s] -- Installing: /ros2_ws/install/hri_interfaces/lib/python3.12/site-packages/hri_interfaces-0.0.1-py3.12.egg-info/top_level.txt
+[4.180s] -- Installing: /ros2_ws/install/hri_interfaces/lib/python3.12/site-packages/hri_interfaces-0.0.1-py3.12.egg-info/SOURCES.txt
+[4.180s] -- Installing: /ros2_ws/install/hri_interfaces/lib/python3.12/site-packages/hri_interfaces
+[4.180s] -- Installing: /ros2_ws/install/hri_interfaces/lib/python3.12/site-packages/hri_interfaces/__init__.py
+[4.180s] -- Installing: /ros2_ws/install/hri_interfaces/lib/python3.12/site-packages/hri_interfaces/msg
+[4.180s] -- Installing: /ros2_ws/install/hri_interfaces/lib/python3.12/site-packages/hri_interfaces/msg/_tracked_face.py
+[4.180s] -- Installing: /ros2_ws/install/hri_interfaces/lib/python3.12/site-packages/hri_interfaces/msg/_tracked_face_s.c
+[4.180s] -- Installing: /ros2_ws/install/hri_interfaces/lib/python3.12/site-packages/hri_interfaces/msg/_tracked_face_array.py
+[4.180s] -- Installing: /ros2_ws/install/hri_interfaces/lib/python3.12/site-packages/hri_interfaces/msg/_tracked_face_array_s.c
+[4.180s] -- Installing: /ros2_ws/install/hri_interfaces/lib/python3.12/site-packages/hri_interfaces/msg/_identified_face.py
+[4.180s] -- Installing: /ros2_ws/install/hri_interfaces/lib/python3.12/site-packages/hri_interfaces/msg/_identified_face_s.c
+[4.181s] -- Installing: /ros2_ws/install/hri_interfaces/lib/python3.12/site-packages/hri_interfaces/msg/_identified_face_array.py
+[4.181s] -- Installing: /ros2_ws/install/hri_interfaces/lib/python3.12/site-packages/hri_interfaces/msg/_identified_face_array_s.c
+[4.181s] -- Installing: /ros2_ws/install/hri_interfaces/lib/python3.12/site-packages/hri_interfaces/msg/__init__.py
+[4.181s] -- Installing: /ros2_ws/install/hri_interfaces/lib/python3.12/site-packages/hri_interfaces/_hri_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+[4.181s] -- Installing: /ros2_ws/install/hri_interfaces/lib/python3.12/site-packages/hri_interfaces/_hri_interfaces_s.ep.rosidl_typesupport_introspection_c.c
+[4.181s] -- Installing: /ros2_ws/install/hri_interfaces/lib/python3.12/site-packages/hri_interfaces/_hri_interfaces_s.ep.rosidl_typesupport_c.c
+[4.181s] -- Installing: /ros2_ws/install/hri_interfaces/lib/python3.12/site-packages/hri_interfaces/hri_interfaces_s__rosidl_typesupport_fastrtps_c.so
+[4.182s] -- Installing: /ros2_ws/install/hri_interfaces/lib/python3.12/site-packages/hri_interfaces/hri_interfaces_s__rosidl_typesupport_introspection_c.so
+[4.182s] -- Installing: /ros2_ws/install/hri_interfaces/lib/python3.12/site-packages/hri_interfaces/hri_interfaces_s__rosidl_typesupport_c.so
+[4.211s] Listing '/ros2_ws/install/hri_interfaces/lib/python3.12/site-packages/hri_interfaces'...
+[4.211s] Compiling '/ros2_ws/install/hri_interfaces/lib/python3.12/site-packages/hri_interfaces/__init__.py'...
+[4.211s] Listing '/ros2_ws/install/hri_interfaces/lib/python3.12/site-packages/hri_interfaces/msg'...
+[4.211s] Compiling '/ros2_ws/install/hri_interfaces/lib/python3.12/site-packages/hri_interfaces/msg/__init__.py'...
+[4.211s] Compiling '/ros2_ws/install/hri_interfaces/lib/python3.12/site-packages/hri_interfaces/msg/_identified_face.py'...
+[4.211s] Compiling '/ros2_ws/install/hri_interfaces/lib/python3.12/site-packages/hri_interfaces/msg/_identified_face_array.py'...
+[4.211s] Compiling '/ros2_ws/install/hri_interfaces/lib/python3.12/site-packages/hri_interfaces/msg/_tracked_face.py'...
+[4.211s] Compiling '/ros2_ws/install/hri_interfaces/lib/python3.12/site-packages/hri_interfaces/msg/_tracked_face_array.py'...
+[4.214s] -- Installing: /ros2_ws/install/hri_interfaces/lib/python3.12/site-packages/hri_interfaces/hri_interfaces_s__rosidl_typesupport_fastrtps_c.so
+[4.214s] -- Set non-toolchain portion of runtime path of "/ros2_ws/install/hri_interfaces/lib/python3.12/site-packages/hri_interfaces/hri_interfaces_s__rosidl_typesupport_fastrtps_c.so" to ""
+[4.215s] -- Installing: /ros2_ws/install/hri_interfaces/lib/python3.12/site-packages/hri_interfaces/hri_interfaces_s__rosidl_typesupport_introspection_c.so
+[4.215s] -- Set non-toolchain portion of runtime path of "/ros2_ws/install/hri_interfaces/lib/python3.12/site-packages/hri_interfaces/hri_interfaces_s__rosidl_typesupport_introspection_c.so" to ""
+[4.215s] -- Installing: /ros2_ws/install/hri_interfaces/lib/python3.12/site-packages/hri_interfaces/hri_interfaces_s__rosidl_typesupport_c.so
+[4.215s] -- Set non-toolchain portion of runtime path of "/ros2_ws/install/hri_interfaces/lib/python3.12/site-packages/hri_interfaces/hri_interfaces_s__rosidl_typesupport_c.so" to ""
+[4.216s] -- Installing: /ros2_ws/install/hri_interfaces/lib/libhri_interfaces__rosidl_generator_py.so
+[4.217s] -- Set non-toolchain portion of runtime path of "/ros2_ws/install/hri_interfaces/lib/libhri_interfaces__rosidl_generator_py.so" to ""
+[4.217s] -- Installing: /ros2_ws/install/hri_interfaces/share/ament_index/resource_index/rust_packages/hri_interfaces
+[4.217s] -- Installing: /ros2_ws/install/hri_interfaces/share/hri_interfaces/rust
+[4.217s] -- Installing: /ros2_ws/install/hri_interfaces/share/hri_interfaces/rust/src
+[4.217s] -- Installing: /ros2_ws/install/hri_interfaces/share/hri_interfaces/rust/src/msg.rs
+[4.217s] -- Installing: /ros2_ws/install/hri_interfaces/share/hri_interfaces/rust/src/msg
+[4.217s] -- Installing: /ros2_ws/install/hri_interfaces/share/hri_interfaces/rust/src/msg/rmw.rs
+[4.217s] -- Installing: /ros2_ws/install/hri_interfaces/share/hri_interfaces/rust/src/lib.rs
+[4.217s] -- Installing: /ros2_ws/install/hri_interfaces/share/hri_interfaces/rust/Cargo.toml
+[4.217s] -- Installing: /ros2_ws/install/hri_interfaces/share/hri_interfaces/rust/build.rs
+[4.218s] -- Installing: /ros2_ws/install/hri_interfaces/share/hri_interfaces/msg/TrackedFace.idl
+[4.218s] -- Installing: /ros2_ws/install/hri_interfaces/share/hri_interfaces/msg/TrackedFaceArray.idl
+[4.218s] -- Installing: /ros2_ws/install/hri_interfaces/share/hri_interfaces/msg/IdentifiedFace.idl
+[4.218s] -- Installing: /ros2_ws/install/hri_interfaces/share/hri_interfaces/msg/IdentifiedFaceArray.idl
+[4.218s] -- Installing: /ros2_ws/install/hri_interfaces/share/hri_interfaces/msg/TrackedFace.msg
+[4.218s] -- Installing: /ros2_ws/install/hri_interfaces/share/hri_interfaces/msg/TrackedFaceArray.msg
+[4.218s] -- Installing: /ros2_ws/install/hri_interfaces/share/hri_interfaces/msg/IdentifiedFace.msg
+[4.218s] -- Installing: /ros2_ws/install/hri_interfaces/share/hri_interfaces/msg/IdentifiedFaceArray.msg
+[4.218s] -- Installing: /ros2_ws/install/hri_interfaces/share/ament_index/resource_index/package_run_dependencies/hri_interfaces
+[4.218s] -- Installing: /ros2_ws/install/hri_interfaces/share/ament_index/resource_index/parent_prefix_path/hri_interfaces
+[4.218s] -- Installing: /ros2_ws/install/hri_interfaces/share/hri_interfaces/environment/ament_prefix_path.sh
+[4.218s] -- Installing: /ros2_ws/install/hri_interfaces/share/hri_interfaces/environment/ament_prefix_path.dsv
+[4.218s] -- Installing: /ros2_ws/install/hri_interfaces/share/hri_interfaces/environment/path.sh
+[4.218s] -- Installing: /ros2_ws/install/hri_interfaces/share/hri_interfaces/environment/path.dsv
+[4.218s] -- Installing: /ros2_ws/install/hri_interfaces/share/hri_interfaces/local_setup.bash
+[4.218s] -- Installing: /ros2_ws/install/hri_interfaces/share/hri_interfaces/local_setup.sh
+[4.218s] -- Installing: /ros2_ws/install/hri_interfaces/share/hri_interfaces/local_setup.zsh
+[4.218s] -- Installing: /ros2_ws/install/hri_interfaces/share/hri_interfaces/local_setup.dsv
+[4.218s] -- Installing: /ros2_ws/install/hri_interfaces/share/hri_interfaces/package.dsv
+[4.218s] -- Installing: /ros2_ws/install/hri_interfaces/share/ament_index/resource_index/packages/hri_interfaces
+[4.218s] -- Installing: /ros2_ws/install/hri_interfaces/share/hri_interfaces/cmake/export_hri_interfaces__rosidl_generator_cExport.cmake
+[4.219s] -- Installing: /ros2_ws/install/hri_interfaces/share/hri_interfaces/cmake/export_hri_interfaces__rosidl_generator_cExport-noconfig.cmake
+[4.219s] -- Installing: /ros2_ws/install/hri_interfaces/share/hri_interfaces/cmake/export_hri_interfaces__rosidl_typesupport_fastrtps_cExport.cmake
+[4.219s] -- Installing: /ros2_ws/install/hri_interfaces/share/hri_interfaces/cmake/export_hri_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[4.219s] -- Installing: /ros2_ws/install/hri_interfaces/share/hri_interfaces/cmake/hri_interfaces__rosidl_typesupport_introspection_cExport.cmake
+[4.219s] -- Installing: /ros2_ws/install/hri_interfaces/share/hri_interfaces/cmake/hri_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[4.219s] -- Installing: /ros2_ws/install/hri_interfaces/share/hri_interfaces/cmake/hri_interfaces__rosidl_typesupport_cExport.cmake
+[4.219s] -- Installing: /ros2_ws/install/hri_interfaces/share/hri_interfaces/cmake/hri_interfaces__rosidl_typesupport_cExport-noconfig.cmake
+[4.219s] -- Installing: /ros2_ws/install/hri_interfaces/share/hri_interfaces/cmake/export_hri_interfaces__rosidl_generator_cppExport.cmake
+[4.220s] -- Installing: /ros2_ws/install/hri_interfaces/share/hri_interfaces/cmake/export_hri_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake
+[4.220s] -- Installing: /ros2_ws/install/hri_interfaces/share/hri_interfaces/cmake/export_hri_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[4.220s] -- Installing: /ros2_ws/install/hri_interfaces/share/hri_interfaces/cmake/hri_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+[4.220s] -- Installing: /ros2_ws/install/hri_interfaces/share/hri_interfaces/cmake/hri_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[4.220s] -- Installing: /ros2_ws/install/hri_interfaces/share/hri_interfaces/cmake/hri_interfaces__rosidl_typesupport_cppExport.cmake
+[4.220s] -- Installing: /ros2_ws/install/hri_interfaces/share/hri_interfaces/cmake/hri_interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+[4.220s] -- Installing: /ros2_ws/install/hri_interfaces/share/hri_interfaces/cmake/export_hri_interfaces__rosidl_generator_pyExport.cmake
+[4.220s] -- Installing: /ros2_ws/install/hri_interfaces/share/hri_interfaces/cmake/export_hri_interfaces__rosidl_generator_pyExport-noconfig.cmake
+[4.220s] -- Installing: /ros2_ws/install/hri_interfaces/share/hri_interfaces/cmake/rosidl_cmake-extras.cmake
+[4.220s] -- Installing: /ros2_ws/install/hri_interfaces/share/hri_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+[4.220s] -- Installing: /ros2_ws/install/hri_interfaces/share/hri_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+[4.221s] -- Installing: /ros2_ws/install/hri_interfaces/share/hri_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+[4.221s] -- Installing: /ros2_ws/install/hri_interfaces/share/hri_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+[4.221s] -- Installing: /ros2_ws/install/hri_interfaces/share/hri_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[4.221s] -- Installing: /ros2_ws/install/hri_interfaces/share/hri_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[4.221s] -- Installing: /ros2_ws/install/hri_interfaces/share/hri_interfaces/cmake/rosidl_cmake_aggregate_target-extras.cmake
+[4.221s] -- Installing: /ros2_ws/install/hri_interfaces/share/hri_interfaces/cmake/hri_interfacesConfig.cmake
+[4.221s] -- Installing: /ros2_ws/install/hri_interfaces/share/hri_interfaces/cmake/hri_interfacesConfig-version.cmake
+[4.221s] -- Installing: /ros2_ws/install/hri_interfaces/share/hri_interfaces/package.xml
+[4.222s] Invoked command in '/ros2_ws/build/hri_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /ros2_ws/build/hri_interfaces

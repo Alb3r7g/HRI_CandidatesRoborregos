@@ -1,0 +1,24 @@
+[0.717s] Invoking command in '/ros2_ws/build/hri_camera': PYTHONPATH=/ros2_ws/build/hri_camera/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/ros2_ws/install/hri_camera/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /ros2_ws/build/hri_camera/build --no-deps symlink_data
+[0.878s] running develop
+[0.974s] running egg_info
+[0.974s] creating hri_camera.egg-info
+[0.983s] writing hri_camera.egg-info/PKG-INFO
+[0.983s] writing dependency_links to hri_camera.egg-info/dependency_links.txt
+[0.983s] writing entry points to hri_camera.egg-info/entry_points.txt
+[0.984s] writing requirements to hri_camera.egg-info/requires.txt
+[0.984s] writing top-level names to hri_camera.egg-info/top_level.txt
+[0.984s] writing manifest file 'hri_camera.egg-info/SOURCES.txt'
+[1.002s] reading manifest file 'hri_camera.egg-info/SOURCES.txt'
+[1.003s] writing manifest file 'hri_camera.egg-info/SOURCES.txt'
+[1.013s] running build_ext
+[1.013s] Creating /ros2_ws/install/hri_camera/lib/python3.12/site-packages/hri-camera.egg-link (link to .)
+[1.014s] Installing camera_node script to /ros2_ws/install/hri_camera/lib/hri_camera
+[1.014s] 
+[1.014s] Installed /ros2_ws/build/hri_camera
+[1.014s] running symlink_data
+[1.014s] creating /ros2_ws/install/hri_camera/share/ament_index
+[1.014s] creating /ros2_ws/install/hri_camera/share/ament_index/resource_index
+[1.014s] creating /ros2_ws/install/hri_camera/share/ament_index/resource_index/packages
+[1.014s] symbolically linking /ros2_ws/build/hri_camera/resource/hri_camera -> /ros2_ws/install/hri_camera/share/ament_index/resource_index/packages
+[1.014s] symbolically linking /ros2_ws/build/hri_camera/package.xml -> /ros2_ws/install/hri_camera/share/hri_camera
+[1.032s] Invoked command in '/ros2_ws/build/hri_camera' returned '0': PYTHONPATH=/ros2_ws/build/hri_camera/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/ros2_ws/install/hri_camera/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /ros2_ws/build/hri_camera/build --no-deps symlink_data

@@ -21,7 +21,8 @@ RUN export ROS_APT_SOURCE_VERSION=$(curl -s https://api.github.com/repos/ros-inf
 # Instalo ROS 2 y herramientas
 RUN apt-get update && apt-get install -y \
     ros-jazzy-desktop \
-    ros-dev-tools
+    ros-dev-tools \
+    ros-jazzy-foxglove-bridge
 
 # Cargo ROS 2 automáticamente
 RUN echo "source /opt/ros/jazzy/setup.bash" >> /root/.bashrc
