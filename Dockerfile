@@ -54,6 +54,21 @@ RUN mkdir -p /opt/weights \
 # cacheado en ~/.insightface/, la inferencia real en runtime sí usa GPU si está.
 RUN python3 -c "from insightface.app import FaceAnalysis; FaceAnalysis(name='buffalo_l').prepare(ctx_id=0)"
 
+# Captura de audio desde el host. El contenedor no recibe /dev/snd: se conecta al
+# servidor PulseAudio que expone PipeWire, cuyo socket monta docker-compose.
+# libasound2-plugins aporta el plugin ALSA->PulseAudio que necesita PortAudio
+# (sounddevice) para ver un dispositivo de entrada; sin el, query_devices() no
+# encuentra ninguno porque ALSA no tiene hardware que enumerar.
+RUN apt-get update && apt-get install -y \
+    libpulse0 \
+    pulseaudio-utils \
+    libportaudio2 \
+    libasound2-plugins \
+    && pip3 install --break-system-packages sounddevice
+
+# Enruta el dispositivo ALSA por defecto hacia PulseAudio.
+RUN printf 'pcm.!default { type pulse }\nctl.!default { type pulse }\n' > /etc/asound.conf
+
 # Cargo ROS 2 automáticamente
 RUN echo "source /opt/ros/jazzy/setup.bash" >> /root/.bashrc
 
