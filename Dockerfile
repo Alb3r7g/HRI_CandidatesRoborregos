@@ -69,7 +69,26 @@ RUN apt-get update && apt-get install -y \
 # Enruta el dispositivo ALSA por defecto hacia PulseAudio.
 RUN printf 'pcm.!default { type pulse }\nctl.!default { type pulse }\n' > /etc/asound.conf
 
+# Silero VAD. --no-deps es obligatorio: su dependencia declarada es torch>=1.12 sin
+# variante de CUDA, y pip reemplazaría el torch+cu130 ya instalado por la rueda
+# genérica más ~2.9 GB de paquetes nvidia duplicados. El torch presente satisface
+# el requisito. Los pesos viajan dentro del propio paquete, así que no hay descarga
+# en el primer arranque ni dependencia de red en tiempo de ejecución.
+RUN pip3 install --break-system-packages --no-deps silero-vad
+
 # Cargo ROS 2 automáticamente
 RUN echo "source /opt/ros/jazzy/setup.bash" >> /root/.bashrc
 
 WORKDIR /ros2_ws
+# Ingesta de documentos: embeddings locales e indice vectorial. A diferencia de
+# silero-vad, aqui no hace falta --no-deps: sentence-transformers declara torch>=2.2 y
+# la rueda +cu130 ya instalada lo satisface, verificado con pip install --dry-run.
+RUN pip3 install --break-system-packages sentence-transformers chromadb
+
+# Los pesos de los modelos de embeddings se descargan al volumen montado, no a la
+# imagen: pesan del orden de GB y dejarlos fuera evita inflar la imagen y volver a
+# descargarlos en cada reconstruccion.
+ENV HF_HOME=/data/models
+
+RUN pip3 uninstall -y --break-system-packages onnxruntime \
+    && pip3 install --break-system-packages --force-reinstall --no-deps onnxruntime-gpu
