@@ -10,6 +10,9 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/TrackedFaceArray.msg"
   "msg/IdentifiedFace.msg"
   "msg/IdentifiedFaceArray.msg"
+  "msg/AudioChunk.msg"
+  "msg/VoiceActivity.msg"
+  "msg/SpeechSegment.msg"
   DEPENDENCIES std_msgs
 )
 
