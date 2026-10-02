@@ -18,7 +18,10 @@ services:
     environment:
       - PULSE_SERVER=unix:/tmp/pulse-native
     devices:
-      - /dev/video0:/dev/video0
+      # Ruta por id del hardware en vez de /dev/video0: el kernel renumera los
+      # nodos cuando la webcam USB se reconecta, y el nodo mapeado al crear el
+      # contenedor queda apuntando a un dispositivo inexistente.
+      - /dev/v4l/by-id/usb-Sonix_Technology_Co.__Ltd._USB2.0_HD_UVC_WebCam-video-index0:/dev/video0
     security_opt:
       - label=disable
     deploy:
