@@ -7,3 +7,5 @@ data/
 MIS_COMANDOS.md
 /claude.md
 Reto Candidates Avanzados 2026-2.pdf
+__pycache__/
+*.pyc
