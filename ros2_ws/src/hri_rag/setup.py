@@ -17,6 +17,8 @@ setup(
     description='Ingesta y consulta de documentos privados con embeddings locales.',
     license='MIT',
     entry_points={
-        'console_scripts': [],
+        'console_scripts': [
+            'rag_service_node = hri_rag.rag_service_node:main',
+        ],
     },
 )
