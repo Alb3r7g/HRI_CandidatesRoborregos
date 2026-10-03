@@ -22,6 +22,7 @@ setup(
         'console_scripts': [
             'audio_capture_node = hri_audio.audio_capture_node:main',
             'vad_node = hri_audio.vad_node:main',
+            'transcription_node = hri_audio.transcription_node:main',
         ],
     },
 )
