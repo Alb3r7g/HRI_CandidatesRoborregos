@@ -24,6 +24,7 @@ setup(
     entry_points={
         'console_scripts': [
             'identity_node = hri_identity.identity_node:main',
+            'voice_identity_node = hri_identity.voice_identity_node:main',
         ],
     },
 )
