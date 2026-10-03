@@ -1,0 +1,11 @@
+string person
+float32 identity_confidence
+string question
+---
+uint8 ANSWERED=0
+uint8 NOT_IN_DOCUMENT=1
+uint8 DENIED=2
+uint8 LLM_UNAVAILABLE=3
+uint8 status
+string answer
+string[] quotes
