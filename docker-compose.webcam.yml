@@ -1,0 +1,4 @@
+services:
+  hri:
+    devices:
+      - /dev/v4l/by-id/usb-Sonix_Technology_Co.__Ltd._USB2.0_HD_UVC_WebCam-video-index0:/dev/video0

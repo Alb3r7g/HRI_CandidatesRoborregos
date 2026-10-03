@@ -9,3 +9,5 @@ MIS_COMANDOS.md
 Reto Candidates Avanzados 2026-2.pdf
 __pycache__/
 *.pyc
+
+.env
