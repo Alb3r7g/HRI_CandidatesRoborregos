@@ -1,0 +1,40 @@
+camera_node:
+  ros__parameters:
+    fps: 30.0
+    reconnect_after_s: 2.0
+
+vad_node:
+  ros__parameters:
+    threshold: 0.5
+    min_silence_ms: 750
+    min_speech_ms: 200
+    speech_pad_ms: 200
+
+transcription_node:
+  ros__parameters:
+    model_size: small
+    compute_type: int8_float16
+    language: es
+
+identity_node:
+  ros__parameters:
+    similarity_threshold: 0.20
+
+voice_identity_node:
+  ros__parameters:
+    similarity_threshold: 0.35
+
+rag_service_node:
+  ros__parameters:
+    access_threshold: 0.85
+
+fusion_node:
+  ros__parameters:
+    high_threshold: 0.90
+    low_threshold: 0.65
+    margin: 0.05
+    liveness_min: 0.015
+    window_pad_s: 0.3
+    face_absent_s: 2.0
+    revoke_after_s: 1.0
+    reask_window_s: 20.0
