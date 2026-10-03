@@ -96,3 +96,6 @@ RUN pip3 uninstall -y --break-system-packages onnxruntime \
 RUN pip3 install --break-system-packages faster-whisper speechbrain \
     && pip3 uninstall -y --break-system-packages onnxruntime \
     && pip3 install --break-system-packages --force-reinstall --no-deps onnxruntime-gpu
+
+RUN pip3 install --break-system-packages --ignore-installed PyJWT \
+    && pip3 install --break-system-packages mcp
