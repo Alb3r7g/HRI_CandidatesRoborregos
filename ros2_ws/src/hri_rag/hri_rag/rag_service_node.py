@@ -15,7 +15,7 @@ class RagServiceNode(Node):
     def __init__(self):
         super().__init__('rag_service_node')
 
-        self.declare_parameter('access_threshold', 0.5)
+        self.declare_parameter('access_threshold', 0.85)
         self.declare_parameter('top_k', DEFAULT_TOP_K)
         self.declare_parameter('llm_model', LLM_MODEL)
         self.declare_parameter('ollama_url', OLLAMA_URL)
