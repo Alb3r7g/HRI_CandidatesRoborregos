@@ -96,7 +96,8 @@ class IdentityNode(Node):
             # debug_image, que ya trae cajas y texto dibujados encima
             crop = self._crop_face(frame, tracked_face, width, height)
             if crop is not None:
-                name, score = self._match_identity(crop)
+                name, score, mouth = self._match_identity(crop)
+                identified_face.mouth_open = mouth
                 if score is not None:
                     identified_face.identity_confidence = float(score)
                 if name is not None:
@@ -154,7 +155,7 @@ class IdentityNode(Node):
 
     def _match_identity(self, crop):
         if not self.enrolled:
-            return None, None
+            return None, None, 0.0
 
         try:
             # DEBUG: descomentar para inspeccionar el crop enviado a InsightFace
@@ -162,11 +163,12 @@ class IdentityNode(Node):
             faces = self.face_app.get(crop)
         except Exception as exc:
             self.get_logger().warn(f'InsightFace falló al procesar el recorte: {exc}')
-            return None, None
+            return None, None, 0.0
 
         if not faces:
-            return None, None
+            return None, None, 0.0
 
+        mouth = self._mouth_open(faces[0])
         embedding = faces[0].normed_embedding
 
         best_name = None
@@ -178,8 +180,17 @@ class IdentityNode(Node):
                 best_name = name
 
         if best_score >= self.similarity_threshold:
-            return best_name, best_score
-        return None, best_score
+            return best_name, best_score, mouth
+        return None, best_score, mouth
+
+    @staticmethod
+    def _mouth_open(face):
+        landmarks = getattr(face, 'landmark_3d_68', None)
+        if landmarks is None:
+            return 0.0
+        gap = np.linalg.norm(landmarks[62, :2] - landmarks[66, :2])
+        width = np.linalg.norm(landmarks[60, :2] - landmarks[64, :2])
+        return float(gap / width) if width > 0 else 0.0
 
     @staticmethod
     def _cosine_similarity(a, b):
