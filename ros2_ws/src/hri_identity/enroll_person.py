@@ -22,7 +22,8 @@ CAPTURE_INTERVAL_S = 0.3
 def parse_args():
     parser = argparse.ArgumentParser(description='Enrola una persona capturando su embedding facial promedio.')
     parser.add_argument('--name', required=True, help='Nombre de la persona (define el archivo <name>.npy)')
-    parser.add_argument('--device', type=int, default=0, help='Índice de la cámara (default: 0)')
+    parser.add_argument('--device', default='0',
+                        help='Índice de la cámara o URL del stream, p. ej. http://IP:8080/video (default: 0)')
     parser.add_argument('--num-samples', type=int, default=DEFAULT_NUM_SAMPLES,
                          help=f'Cantidad de frames con cara detectada a promediar (default: {DEFAULT_NUM_SAMPLES})')
     parser.add_argument('--output-dir', default=DEFAULT_OUTPUT_DIR,
@@ -37,7 +38,7 @@ def main():
     app = FaceAnalysis(name='buffalo_l')
     app.prepare(ctx_id=0)
 
-    capture = cv2.VideoCapture(args.device)
+    capture = cv2.VideoCapture(int(args.device) if args.device.isdigit() else args.device)
     if not capture.isOpened():
         print(f'No se pudo abrir la cámara (device={args.device})', file=sys.stderr)
         sys.exit(1)
