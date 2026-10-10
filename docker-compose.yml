@@ -15,6 +15,9 @@ services:
       # ese socket en lugar de pasar /dev/snd: el acceso directo al hardware ALSA
       # competiria con PipeWire, que ya tiene el dispositivo tomado.
       - ${XDG_RUNTIME_DIR:-/run/user/1000}/pulse/native:/tmp/pulse-native
+      - /usr/bin/ollama:/usr/bin/ollama:ro
+      - /usr/lib/ollama:/usr/lib/ollama:ro
+      - ${HOME}/.ollama:/root/.ollama
     environment:
       - PULSE_SERVER=unix:/tmp/pulse-native
       - CAMERA_SOURCE=${CAMERA_SOURCE:-}
