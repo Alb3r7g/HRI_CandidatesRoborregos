@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>hri_bringup</name>
+  <version>0.0.1</version>
+  <description>Arranque de todo el sistema HRI con un solo ros2 launch y la configuracion de umbrales en un archivo.</description>
+  <maintainer email="constansalazar@gmail.com">Albert Constantino Salazar</maintainer>
+  <license>MIT</license>
+
+  <exec_depend>launch</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
+  <exec_depend>hri_camera</exec_depend>
+  <exec_depend>hri_vision</exec_depend>
+  <exec_depend>hri_identity</exec_depend>
+  <exec_depend>hri_audio</exec_depend>
+  <exec_depend>hri_rag</exec_depend>
+  <exec_depend>hri_fusion</exec_depend>
+  <exec_depend>foxglove_bridge</exec_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>hri_fusion</name>
+  <version>0.0.1</version>
+  <description>Fusion de cara, voz y movimiento de boca en una confianza por persona y politica de acceso de tres estados.</description>
+  <maintainer email="constansalazar@gmail.com">Albert Constantino Salazar</maintainer>
+  <license>MIT</license>
+
+  <depend>rclpy</depend>
+  <depend>sensor_msgs</depend>
+  <depend>std_msgs</depend>
+  <depend>hri_interfaces</depend>
+  <depend>cv_bridge</depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>

@@ -1,3 +1,13 @@
 ros2_ws/build/
 ros2_ws/install/
+ros2_ws/log/claude.md
 ros2_ws/log/
+ros2_ws/debug_crop.jpg
+data/
+MIS_COMANDOS.md
+/claude.md
+Reto Candidates Avanzados 2026-2.pdf
+__pycache__/
+*.pyc
+
+.env

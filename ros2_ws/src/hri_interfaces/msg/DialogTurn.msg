@@ -1,0 +1,13 @@
+std_msgs/Header header
+string question
+string identity
+float32 face
+float32 voice
+float32 mouth
+bool live
+float32 confidence
+string decision
+string reason
+string answer
+float32 answer_seconds
+uint32 quotes

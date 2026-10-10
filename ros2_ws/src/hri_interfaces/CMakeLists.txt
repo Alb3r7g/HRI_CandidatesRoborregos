@@ -1,0 +1,23 @@
+cmake_minimum_required(VERSION 3.8)
+project(hri_interfaces)
+
+find_package(ament_cmake REQUIRED)
+find_package(rosidl_default_generators REQUIRED)
+find_package(std_msgs REQUIRED)
+
+rosidl_generate_interfaces(${PROJECT_NAME}
+  "msg/TrackedFace.msg"
+  "msg/TrackedFaceArray.msg"
+  "msg/IdentifiedFace.msg"
+  "msg/IdentifiedFaceArray.msg"
+  "msg/AudioChunk.msg"
+  "msg/VoiceActivity.msg"
+  "msg/SpeechSegment.msg"
+  "msg/Transcript.msg"
+  "msg/VoiceIdentity.msg"
+  "msg/DialogTurn.msg"
+  "srv/QueryDocument.srv"
+  DEPENDENCIES std_msgs
+)
+
+ament_package()
