@@ -6,7 +6,7 @@ boca**, y responde su pregunta usando **únicamente el documento privado de esa 
 (RAG local con Ollama). Si la confianza no alcanza, vuelve a preguntar o se niega.
 Rechaza a desconocidos y a intentos de suplantación con foto o audio grabado.
 
-**Video DEMO:** _pendiente_
+**Video DEMO:** [ver en Google Drive](https://drive.google.com/file/d/1zydsVZz2bxxNAArZDeGpmM3QzasmnNWP/view?usp=sharing)
 
 ---
 
