@@ -15,6 +15,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/SpeechSegment.msg"
   "msg/Transcript.msg"
   "msg/VoiceIdentity.msg"
+  "msg/DialogTurn.msg"
   "srv/QueryDocument.srv"
   DEPENDENCIES std_msgs
 )

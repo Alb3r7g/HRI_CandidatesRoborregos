@@ -1,5 +1,6 @@
 import textwrap
 import time
+from functools import partial
 import unicodedata
 from collections import Counter, deque, namedtuple
 
@@ -14,12 +15,12 @@ from std_msgs.msg import String
 from hri_fusion.fusion import (ANSWER, ASK, HIGH_THRESHOLD, LIVENESS_MIN, LOW_THRESHOLD,
                                MARGIN, REASK_TEXT, AccessPolicy, Utterance,
                                fused_confidence, pick_speaker)
-from hri_interfaces.msg import IdentifiedFaceArray, Transcript, VoiceIdentity
+from hri_interfaces.msg import DialogTurn, IdentifiedFaceArray, Transcript, VoiceIdentity
 from hri_interfaces.srv import QueryDocument
 
 UNKNOWN = 'desconocido'
-DENIED_TEXT = 'No tengo permiso para consultar ese documento.'
-UNAVAILABLE_TEXT = 'El servicio de documentos no esta disponible en este momento.'
+DENIED_TEXT = 'Lo siento, no tienes acceso, así que no puedo consultar ningún documento.'
+UNAVAILABLE_TEXT = 'Ahora mismo no puedo consultar los documentos. Intenta de nuevo en un momento.'
 FACE_HISTORY_S = 30.0
 VOICE_WAIT_S = 1.5
 MIN_VOICE_S = 1.0
@@ -65,6 +66,7 @@ class FusionNode(Node):
 
         self.response_pub = self.create_publisher(String, '/hri/response', 10)
         self.overlay_pub = self.create_publisher(Image, '/fusion/overlay_image', 10)
+        self.dialog_pub = self.create_publisher(DialogTurn, '/hri/dialog', 10)
         self.create_subscription(IdentifiedFaceArray, '/vision/identified_faces',
                                  self.faces_callback, 10)
         self.create_subscription(Transcript, '/audio/transcript', self.transcript_callback, 10)
@@ -147,6 +149,8 @@ class FusionNode(Node):
         self.expire_asked()
         if identity in self.policy.granted and self.session.get(identity, {}).get('track') != track:
             self.revoke(identity, f'ahora habla otro track ({track})')
+        was_granted = identity in self.policy.granted
+        was_asked = identity in self.policy.asked
         decision = self.policy.decide(identity, confidence, utterance.live)
         if decision == ASK and identity:
             self.asked_at[identity] = time.monotonic()
@@ -158,15 +162,45 @@ class FusionNode(Node):
         self.last.update(track=track, identity=identity, confidence=confidence,
                          decision=decision, when=time.monotonic())
 
+        turn = DialogTurn()
+        turn.header = transcript.header
+        turn.question = transcript.text
+        turn.identity = identity
+        turn.face = float(face or 0.0)
+        turn.voice = float(voice or 0.0)
+        turn.mouth = float(activity or 0.0)
+        turn.live = utterance.live
+        turn.confidence = float(confidence)
+        turn.decision = decision
+        turn.reason = self.reason(decision, identity, utterance.live, was_granted, was_asked)
+
         if decision == ANSWER:
             self.session[identity] = {'track': track, 'voice': voice, 'mouth': activity,
                                       'confidence': confidence, 'below_since': None}
-            self.query(identity, confidence, transcript.text)
+            self.query(identity, confidence, transcript.text, turn)
         elif decision == ASK:
-            self.say(REASK_TEXT)
+            self.say(REASK_TEXT, turn)
         else:
             self.session.pop(identity, None)
-            self.say(DENIED_TEXT)
+            self.say(DENIED_TEXT, turn)
+
+    def reason(self, decision, identity, live, was_granted, was_asked):
+        high, low = self.policy.high, self.policy.low
+        if not identity:
+            return 'persona no reconocida'
+        if not live:
+            if decision == ASK:
+                return 'no detecto movimiento de boca: ¿foto o audio grabado?'
+            return 'boca quieta por segunda vez'
+        if decision == ANSWER:
+            if was_granted:
+                return f'acceso vigente (≥ {high - self.policy.margin:.2f})'
+            return f'≥ {high:.2f}'
+        if decision == ASK:
+            return f'{low:.2f} ≤ C < {high:.2f}'
+        if was_asked:
+            return 'segunda vez en la franja de re-pregunta'
+        return f'C < {low:.2f}'
 
     def expire_asked(self):
         for identity, when in list(self.asked_at.items()):
@@ -174,30 +208,36 @@ class FusionNode(Node):
                 self.policy.asked.discard(identity)
                 del self.asked_at[identity]
 
-    def query(self, identity, confidence, question):
+    def query(self, identity, confidence, question, turn):
         if not self.rag.service_is_ready():
-            self.get_logger().error('/rag/query no esta disponible.')
-            self.say(UNAVAILABLE_TEXT)
+            self.get_logger().error('/rag/query no está disponible.')
+            self.say(UNAVAILABLE_TEXT, turn)
             return
         request = QueryDocument.Request()
         request.person = identity
         request.identity_confidence = float(confidence)
         request.question = question
-        self.rag.call_async(request).add_done_callback(self.on_answer)
+        self.rag.call_async(request).add_done_callback(
+            partial(self.on_answer, turn, time.monotonic()))
 
-    def on_answer(self, future):
+    def on_answer(self, turn, started, future):
+        turn.answer_seconds = float(time.monotonic() - started)
         try:
             response = future.result()
         except Exception as error:
-            self.get_logger().error(f'Fallo la consulta RAG: {error}')
-            self.say(UNAVAILABLE_TEXT)
+            self.get_logger().error(f'Falló la consulta RAG: {error}')
+            self.say(UNAVAILABLE_TEXT, turn)
             return
-        self.say(response.answer)
+        turn.quotes = len(response.quotes)
+        self.say(response.answer, turn)
 
-    def say(self, text):
+    def say(self, text, turn=None):
         self.last['answer'] = text
         self.response_pub.publish(String(data=text))
         self.get_logger().info(f'Robot: {text}')
+        if turn is not None:
+            turn.answer = text
+            self.dialog_pub.publish(turn)
 
     def monitor_access(self):
         now = self.now()
@@ -205,13 +245,13 @@ class FusionNode(Node):
         for identity in list(self.policy.granted):
             state = self.session.get(identity)
             if state is None:
-                self.revoke(identity, 'sin sesion')
+                self.revoke(identity, 'sin sesión')
                 continue
             recent = [o for o in self.faces
                       if o.track == state['track'] and o.name == identity
                       and o.t >= now - self.param('face_absent_s')]
             if not recent:
-                self.revoke(identity, f'cara ausente mas de {self.param("face_absent_s"):.0f} s')
+                self.revoke(identity, f'su cara no aparece hace más de {self.param("face_absent_s"):.0f} s')
                 continue
             window = [o.score for o in recent if o.t >= now - 1.0] or [o.score for o in recent]
             state['confidence'] = fused_confidence(float(np.median(window)), state['voice'],
@@ -221,12 +261,18 @@ class FusionNode(Node):
             elif state['below_since'] is None:
                 state['below_since'] = now
             elif now - state['below_since'] > self.param('revoke_after_s'):
-                self.revoke(identity, f'confianza {state["confidence"]:.2f} bajo {floor:.2f}')
+                self.revoke(identity, f'su confianza bajó a {state["confidence"]:.2f} (< {floor:.2f})')
 
     def revoke(self, identity, reason):
         self.policy.revoke(identity)
         self.session.pop(identity, None)
         self.get_logger().warn(f'Acceso revocado a {identity}: {reason}')
+        turn = DialogTurn()
+        turn.header.stamp = self.get_clock().now().to_msg()
+        turn.identity = identity
+        turn.decision = 'revocar'
+        turn.reason = reason
+        self.dialog_pub.publish(turn)
 
     def image_callback(self, msg):
         if self.overlay_pub.get_subscription_count() == 0:

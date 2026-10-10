@@ -19,6 +19,7 @@ setup(
     entry_points={
         'console_scripts': [
             'fusion_node = hri_fusion.fusion_node:main',
+            'conversation_view = hri_fusion.conversation_view:main',
         ],
     },
 )
